@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Squeleto</title>    
+    <title>EP4 xls to db</title>    
     <link rel="stylesheet" type="text/css" href="assets/styles//style.css">     
     
 
@@ -24,22 +24,14 @@
     </header>
      <?php echo CI_VERSION; ?>
     <section>
-    
-        <article>
-            <header>
-                <h2>Article title</h2>
-                <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-            </header>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        </article>
-        
-        <article>
-            <header>
-                <h2>Article title</h2>
-                <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-            </header>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        </article>
+    <?php foreach ($datos->Datos as $nomina) {
+            echo "<div class='div_user caja-sombra'>";
+            
+            echo "<span class='innerTEXT'>".$nomina->nombre."</span>";
+            
+            
+            echo "</div>";  
+        }?>
         
     </section>
 
